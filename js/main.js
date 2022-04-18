@@ -11,13 +11,18 @@ const displayBooks = () => {
     item.innerHTML = `<span class="title">${books[i].title}</span> by ${books[i].author} <br>`;
     const btn = document.createElement('button');
     const divider = document.createElement('hr');
-    btn.setAttribute('data-index', i);
     btn.textContent = 'Remove';
     item.append(btn);
     item.append(divider);
+    btn.onclick = () => {
+      books.splice(i, 1);
+      displayBooks();
+    };
     booksContainer.append(item);
   }
 };
+
+document.onload = displayBooks();
 
 function addBook(title, author) {
   books.push({ title, author });
