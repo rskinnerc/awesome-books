@@ -4,6 +4,15 @@ let books = [
 
 const booksContainer = document.getElementById('books-cont');
 
+function saveData() {
+  localStorage.setItem('books', JSON.stringify(books));
+}
+
+function removeBook(index) {
+  books.splice(index, 1);
+  saveData();
+}
+
 const displayBooks = () => {
   booksContainer.innerHTML = '';
   for (let i = 0; i < books.length; i += 1) {
@@ -15,8 +24,7 @@ const displayBooks = () => {
     item.append(btn);
     item.append(divider);
     btn.onclick = () => {
-      books.splice(i, 1);
-      saveData();
+      removeBook(i);
       displayBooks();
     };
     booksContainer.append(item);
@@ -24,12 +32,12 @@ const displayBooks = () => {
 };
 
 window.onload = () => {
-  if(localStorage.getItem('books')) {
+  if (localStorage.getItem('books')) {
     books = JSON.parse(localStorage.getItem('books'));
   }
-  
-  displayBooks(); 
-}
+
+  displayBooks();
+};
 
 function addBook(title, author) {
   books.push({ title, author });
@@ -44,7 +52,3 @@ document.forms[0].onsubmit = (event) => {
   addBook(title, author);
   saveData();
 };
-
-function saveData() {
-  localStorage.setItem('books', JSON.stringify(books));
-}
