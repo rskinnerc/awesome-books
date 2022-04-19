@@ -5,7 +5,7 @@ class DisplayBooks {
   constructor() {
     if(localStorage.getItem('books')){
       this.books = JSON.parse(localStorage.getItem('books')).map((book)=> {
-        return new Book(book.title, book.author);
+        return new Book(book.title, book.author, book.id);
       });
     }
   }
@@ -16,9 +16,13 @@ class DisplayBooks {
     this.saveBooks();
   }
 
-  // static removeBook() {
-
-  // }
+  removeBook(id) {
+    this.books = this.books.filter((book)=> {
+      return book.id !== id;
+    });
+    this.render();
+    this.saveBooks();
+  }
 
   render() {
     this.booksContainer.innerHTML = '';
