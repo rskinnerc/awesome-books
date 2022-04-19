@@ -3,6 +3,7 @@ let display;
 window.onload = () => {
   // eslint-disable-next-line no-undef
   display = new DisplayBooks();
+  display.render();
 };
 
 document.forms[0].onsubmit = (event) => {
