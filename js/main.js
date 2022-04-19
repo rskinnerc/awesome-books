@@ -14,4 +14,5 @@ document.forms[0].onsubmit = (event) => {
   // eslint-disable-next-line no-undef
   const newBook = new Book(title, author);
   display.addBook(newBook);
+  thisForm.reset();
 };

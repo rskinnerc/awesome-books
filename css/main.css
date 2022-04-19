@@ -10,6 +10,12 @@ body {
   margin-inline: auto;
 }
 
+#books-cont h3 {
+  text-align: center;
+  padding: 0.3em;
+  color: rgb(197, 197, 197);
+}
+
 .booklist h1 {
   text-align: center;
   margin: 1em 0;
@@ -29,6 +35,7 @@ body {
 .booklist ul li {
   padding: 0.5em 1em;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 

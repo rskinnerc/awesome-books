@@ -27,6 +27,10 @@ class DisplayBooks {
 
   render() {
     this.booksContainer.innerHTML = '';
+    if (this.books.length === 0) {
+      this.booksContainer.innerHTML = '<h3>There are no books.</h3>';
+      return;
+    }
     for (let i = 0; i < this.books.length; i += 1) {
       this.booksContainer.append(this.books[i].createNode());
     }
