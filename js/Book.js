@@ -12,7 +12,7 @@ class Book {
   createNode() {
     const node = document.createElement('li');
     node.innerHTML = `
-        <span>${this.title}</span> by ${this.author} <button onclick="display.removeBook(${this.id})">Remove</button>
+        <span>${this.title} by ${this.author}</span> <button onclick="display.removeBook(${this.id})">Remove</button>
     `;
 
     return node;
