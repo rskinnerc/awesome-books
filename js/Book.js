@@ -4,7 +4,7 @@ class Book {
   constructor(title, author, id = null) {
     this.title = title;
     this.author = author;
-    if(id !== null) {
+    if (id !== null) {
       this.id = id;
     }
   }
@@ -12,7 +12,7 @@ class Book {
   createNode() {
     const node = document.createElement('li');
     node.innerHTML = `
-        <span>${this.title} by ${this.author}</span> <button onclick="display.removeBook(${this.id})">Remove</button>
+        <span><span class="book-title">${this.title}</span> by ${this.author}</span> <button onclick="display.removeBook(${this.id})">Remove</button>
     `;
 
     return node;

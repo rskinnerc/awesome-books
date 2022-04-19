@@ -2,9 +2,10 @@
 class DisplayBooks {
   books = [];
   booksContainer = document.getElementById('books-cont');
+
   constructor() {
-    if(localStorage.getItem('books')){
-      this.books = JSON.parse(localStorage.getItem('books')).map((book)=> {
+    if (localStorage.getItem('books')) {
+      this.books = JSON.parse(localStorage.getItem('books')).map((book) => {
         return new Book(book.title, book.author, book.id);
       });
     }
@@ -17,7 +18,7 @@ class DisplayBooks {
   }
 
   removeBook(id) {
-    this.books = this.books.filter((book)=> {
+    this.books = this.books.filter((book) => {
       return book.id !== id;
     });
     this.render();
