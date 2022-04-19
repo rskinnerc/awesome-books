@@ -5,24 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/reset.css" rel="stylesheet" >
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
   <title>Awesome Books</title>
 </head>
 
 <body>
-  <section>
+  <section class="booklist">
     <h1>Awesome Books</h1>
     <ul class="books-container" id="books-cont">
 
     </ul>
   </section>
-  <section>
+  <section class="form">
     <form>
-      <input name="title" type="text" placeholder="title">
-      <input name="author" type="text" placeholder="author">
+      <h2>Add a new book</h2>
+      <input name="title" type="text" required placeholder="title">
+      <input name="author" type="text" required placeholder="author">
       <button type="submit">Add</button>
     </form>
   </section>
+  <script src="js/Book.js"></script>
+  <script src="js/DisplayBooks.js"></script>
   <script src="js/main.js"></script>
 </body>
 
