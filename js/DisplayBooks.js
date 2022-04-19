@@ -1,13 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 class DisplayBooks {
   books = [];
+
   booksContainer = document.getElementById('books-cont');
 
   constructor() {
     if (localStorage.getItem('books')) {
-      this.books = JSON.parse(localStorage.getItem('books')).map((book) => {
-        return new Book(book.title, book.author, book.id);
-      });
+      // eslint-disable-next-line no-undef
+      this.books = JSON.parse(localStorage.getItem('books')).map((book) => new Book(book.title, book.author, book.id));
     }
   }
 
@@ -18,9 +18,7 @@ class DisplayBooks {
   }
 
   removeBook(id) {
-    this.books = this.books.filter((book) => {
-      return book.id !== id;
-    });
+    this.books = this.books.filter((book) => book.id !== id);
     this.render();
     this.saveBooks();
   }

@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 class Book {
   id = new Date().getMilliseconds();
+
   constructor(title, author, id = null) {
     this.title = title;
     this.author = author;

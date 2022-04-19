@@ -28,15 +28,15 @@ body {
   border: 2px solid grey;
 }
 
-.booklist ul li:nth-child(odd) {
-  background-color: #e4e4e4;
-}
-
 .booklist ul li {
   padding: 0.5em 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.booklist ul li:nth-child(odd) {
+  background-color: #e4e4e4;
 }
 
 button {
@@ -60,7 +60,7 @@ form {
   width: 70%;
   margin-inline: auto;
   padding: 2em;
-  gap: 0.5em
+  gap: 0.5em;
 }
 
 form h2 {
