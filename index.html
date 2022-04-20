@@ -12,13 +12,21 @@
 </head>
 
 <body>
+  <header>
+    <h2>Awesome Books</h2>
+    <nav>
+      <li><a href="#" id="link-list" data-section="booklist">List</a></li>
+      <li><a href="#" id="link-add" data-section="form">Add new</a></li>
+      <li><a href="#" id="link-contact" data-section="contact">Contact</a></li>
+    </nav>
+  </header>
   <section class="booklist">
     <h1>Awesome Books</h1>
     <ul class="books-container" id="books-cont">
 
     </ul>
   </section>
-  <section class="form">
+  <section class="form hidden">
     <form>
       <h2>Add a new book</h2>
       <input name="title" type="text" required placeholder="title">
@@ -26,6 +34,19 @@
       <button type="submit">Add</button>
     </form>
   </section>
+  <section class="contact hidden">
+    <h2>Contact Information</h2>
+    <p>Do have any questions or just want to say "Hello"?</p>
+    <p>You can reach out to us!</p>
+    <ul>
+      <li>Our e-mail mail@mail.com</li>
+      <li>Our Phone number: 0043586534422</li>
+      <li>Our address: Street name 22, 84503 City. Country.</li>
+    </ul>
+  </section>
+  <footer>
+    Copyright ...
+  </footer>
   <script src="js/Book.js"></script>
   <script src="js/DisplayBooks.js"></script>
   <script src="js/main.js"></script>

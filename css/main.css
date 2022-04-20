@@ -4,10 +4,17 @@ body {
 }
 
 .booklist,
-.form {
+.form,
+.contact,
+header,
+footer {
   width: calc(100% - 4em);
   max-width: 600px;
   margin-inline: auto;
+}
+
+.hidden {
+  display: none;
 }
 
 #books-cont h3 {

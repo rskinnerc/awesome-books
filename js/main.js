@@ -16,3 +16,24 @@ document.forms[0].onsubmit = (event) => {
   display.addBook(newBook);
   thisForm.reset();
 };
+
+function changePage(link) {
+  let sections = document.querySelectorAll('section');
+  sections.forEach( (section) => {
+    if(section.classList.contains(link)) {
+      section.classList.remove('hidden');
+    }
+    else {
+      section.classList.add('hidden');
+    }
+  });
+}
+
+let pageLinks = document.querySelectorAll('[data-section]');
+
+pageLinks.forEach((link)=> {
+  link.onclick = (event) => {
+    event.preventDefault();
+    changePage(link.dataset.section);
+  }
+});
