@@ -7,10 +7,16 @@ body {
 .form,
 .contact,
 header,
-footer {
+footer,
+#today {
   width: calc(100% - 4em);
   max-width: 600px;
   margin-inline: auto;
+}
+
+#today {
+  text-align: right;
+  padding: 0.5em 0;
 }
 
 .hidden {
@@ -94,11 +100,13 @@ footer {
   margin-top: 1em;
   justify-content: space-between;
   padding: 0.5em 1em;
+  align-items: center;
 }
 
 header ul {
   display: flex;
   gap: 2em;
+  align-items: center;
 }
 
 header ul li:nth-child(-n+2)::after {
@@ -106,3 +114,17 @@ header ul li:nth-child(-n+2)::after {
   margin-left: 1em;
 }
 
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact h2 {
+  margin: 1.2em auto;
+  text-align: center;
+}
+
+.contact ul {
+  list-style: disc;
+  margin: 1.2em 2em;
+}
