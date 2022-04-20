@@ -24,8 +24,7 @@ function changePage(link) {
   sections.forEach((section) => {
     if (section.classList.contains(link)) {
       section.classList.remove('hidden');
-    }
-    else {
+    } else {
       section.classList.add('hidden');
     }
   });
@@ -37,5 +36,5 @@ pageLinks.forEach((link) => {
   link.onclick = (event) => {
     event.preventDefault();
     changePage(link.dataset.section);
-  }
+  };
 });

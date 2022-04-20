@@ -34,6 +34,12 @@ footer,
   margin: 1em 0;
 }
 
+header ul {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
 .booklist ul {
   width: 100%;
   display: flex;
@@ -100,12 +106,6 @@ footer {
   margin-top: 1em;
   justify-content: space-between;
   padding: 0.5em 1em;
-  align-items: center;
-}
-
-header ul {
-  display: flex;
-  gap: 2em;
   align-items: center;
 }
 
