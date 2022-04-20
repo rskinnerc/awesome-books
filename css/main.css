@@ -82,3 +82,27 @@ form input {
 form button {
   align-self: flex-end;
 }
+
+section {
+  padding: 2em 0;
+}
+
+header,
+footer {
+  display: flex;
+  border: 2px solid grey;
+  margin-top: 1em;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+}
+
+header ul {
+  display: flex;
+  gap: 2em;
+}
+
+header ul li:nth-child(-n+2)::after {
+  content: "|";
+  margin-left: 1em;
+}
+
