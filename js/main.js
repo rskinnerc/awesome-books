@@ -1,9 +1,11 @@
 let display;
+const today = document.getElementById('today');
 
 window.onload = () => {
   // eslint-disable-next-line no-undef
   display = new DisplayBooks();
   display.render();
+  today.textContent = new Date().toString();
 };
 
 document.forms[0].onsubmit = (event) => {
@@ -16,3 +18,23 @@ document.forms[0].onsubmit = (event) => {
   display.addBook(newBook);
   thisForm.reset();
 };
+
+function changePage(link) {
+  const sections = document.querySelectorAll('section');
+  sections.forEach((section) => {
+    if (section.classList.contains(link)) {
+      section.classList.remove('hidden');
+    } else {
+      section.classList.add('hidden');
+    }
+  });
+}
+
+const pageLinks = document.querySelectorAll('[data-section]');
+
+pageLinks.forEach((link) => {
+  link.onclick = (event) => {
+    event.preventDefault();
+    changePage(link.dataset.section);
+  };
+});
